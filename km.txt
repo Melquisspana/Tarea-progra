@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // Programa realizado por 
+            // Día: Enero 16,2023
+            Console.WindowHeight = 20;  // alto de la ventana           
+            Console.WindowWidth = 65; //ancho de la ventana
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.Title = "Conversor de kilometros a varas, yardas y metr";
+            Console.Write("\n\n");
+            // Declaracion de variable
+            double kilometros,yardas, varas,metros;
+            // Entrada
+            Console.Write("\tConversor");
+            Console.Write("\n");
+            Console.Write("\tDigitar la cantidad de kilometros a convertir:  ");
+            kilometros = double.Parse(Console.ReadLine());
+           // Procesos
+            yardas = kilometros * 1093.61;  // calculo de yardas 
+            varas = kilometros * 1.196;  // calculo varas
+            metros = kilometros * 1000;  // calculo metros
+            // Salida
+            Console.Write("\n");
+            Console.WriteLine("\t---------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\tLa cantidad de kilometros en yardas es de:  " + yardas);
+            Console.WriteLine("\tLa cantidad de kilometros en varas es de:  " + varas);
+            Console.WriteLine("\tLa cantidad de kilometros en metros es de:  " + metros);
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("\t---------------------------------------");
+            Console.Write("\n");
+            Console.WriteLine("--> Fin del Programa");
+            Console.Write("\t");
+            Console.ReadKey();
+
+        }
+    }
+}

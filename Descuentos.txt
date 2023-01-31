@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Programa realizado por
+            // Día: Enero 16,2023
+            Console.WindowHeight = 20; // alto de la ventana
+            Console.WindowWidth = 65; //ancho de la ventana
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.Title = "Programa de Calculo de descuentos de un salario base";
+            Console.Write("\n Descuentos de ley");
+            Console.Write("\n\n");
+            // Declaracion de variables
+            Double sal, renta, afp, isss, salario, total;
+            // Entrada
+            Console.Write("\n");
+            Console.Write("\tDigitar su salario base: ");
+            sal = Double.Parse(Console.ReadLine());
+            // Procesos
+            renta = sal * 0.10; // calculo de la renta
+            afp = sal * 0.07; // calculo del afp
+            isss = sal * 0.05; // calculo del seguro social
+            salario = renta + afp + isss;
+            total = sal - salario;
+            // Salida
+            Console.Write("\n");
+            Console.Write("\tDescuentos a aplicar a su salario: ");
+            Console.Write("\n");
+            Console.WriteLine("\t---------------------------------------");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\tEl descuento de la Renta es: $" + Math.Round(renta, 2));
+            Console.WriteLine("\tEl descuento de las AFP: $" + Math.Round(afp, 2));
+            Console.WriteLine("\tEl descuento del Seguro Social: $" + Math.Round(isss, 2));
+            Console.WriteLine("\t---------------------------------------");
+            Console.WriteLine("\tSu total de descuentos es de: $" + salario);
+            Console.WriteLine("\t---------------------------------------");
+            Console.WriteLine("\tSu salario total a recibir es de: $" + Math.Round(total, 2));
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("\t---------------------------------------");
+            Console.Write("\n");
+            //Pantalla opcional
+            Console.Write("\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine("*********************************************");
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine("\t* *");
+            Console.WriteLine("\t* Este programa fue diseñado por: *");
+            Console.WriteLine("\t* *");
+            Console.WriteLine("\t* Grupo Metallica *");
+            Console.WriteLine("\t* *");
+            Console.Write("\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.WriteLine("*********************************************");
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Write("\t");
+            Console.WriteLine("--> Fin del Programa");
+            Console.Write("\t");
+            Console.ReadKey();
+        }
+    }
+}
