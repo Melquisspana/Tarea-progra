@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Main
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double juan, raquel, daniel, dolar, total, porcraquel, porcdaniel, porcjuan;
+            Console.WriteLine("Ingresa aporte de juan");
+            juan = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingresa aporte de raquel");
+            raquel = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingresa aporte de daniel");
+            daniel = Convert.ToDouble(Console.ReadLine());
+            dolar = daniel / 3.25;
+            total = juan + raquel + dolar;
+            porcraquel = (raquel / total) * 100;
+            porcdaniel = (dolar / total) * 100;
+            porcjuan = (juan / total) * 100;
+            Console.WriteLine("El capital total es  " + total + "\n" +
+      "El porcentaje de aporte de juan es  " + porcjuan + "\n" +
+      "El porcentaje de aporte de raquel es  " + porcraquel + "\n" +
+      "El porcentaje de aporte de daniel es  " + porcdaniel);
+            Console.ReadLine();
+        }
+    }
+}
